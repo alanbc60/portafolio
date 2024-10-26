@@ -3,7 +3,7 @@ import Header from './components/Header'
 import './Index.css'
 import Information from './components/Information'
 import Aboutme from './components/Aboutme'
-import Projects from './components/Projects'
+import ProjectsEducation from './components/ProjectsEducation'
 import Footer from './components/Footer'
 
 function Index() {
@@ -12,11 +12,11 @@ function Index() {
   return (
     <>
       <Header/>
-      <main>
+      <main className='section-main'>
         <Information/>
         <section className='section-contenido'>
           <Aboutme/>
-          <Projects/>
+          <ProjectsEducation/>
         </section>
       </main>
       <Footer/>
