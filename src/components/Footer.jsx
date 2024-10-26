@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>© 2024 Tu Nombre. Todos los derechos reservados.</p>
+        <p>© 2024 alanbc. Todos los derechos reservados.</p>
         <div className="footer-links">
           <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer">
             <span className="material-symbols-outlined">code</span>
