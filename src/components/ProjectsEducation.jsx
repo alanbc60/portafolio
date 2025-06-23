@@ -19,11 +19,12 @@ function Projects() {
 
  
     return (
-      <div className="proyectos_educacion-container">
+      <section className="projects_education-section">
         {/* navegacion entre proyectos y educacion */}
-        <div className="navegacion-container">
+        <div className="navegation-container">
             <button className="navegacion-button" onClick={handleProyectos}>Proyectos</button>
             <button className="navegacion-button" onClick={handleEducacion}>Educación</button>
+            <button className="navegacion-button">Certificados</button>
         </div>
         {seleccionNavegacion === 'proyectos' ? (
             <div className="proyectos-container">
@@ -35,7 +36,7 @@ function Projects() {
             <Education/>
         )}
 
-      </div>
+      </section>
     );
       }
       

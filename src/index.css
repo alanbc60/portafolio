@@ -8,141 +8,191 @@
   background-color: #151525;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #151525;
-  min-height: 10vh;
+  background-color: #1a1a2e;
+  height: 8vh;
+  width: 100%;
   padding: 10px;
   box-shadow: 2px 10px 8px rgba(0, 0, 0, 0.4);
-}
-
-/* ================== Seccion contenido  ==================*/
-
-.section-contenido {
-  display: flex;
-  width: 100%;
-  /* min-width: 100vh; */
-  flex-wrap:  wrap;
-  min-height: 70vh;
-  background-color: #151625;
-  padding: 10px;
-}
-
-/* Aboutme */
-.sobre-mi-card {
-  background-color: #151525;
-  padding: 20px;
+  margin-bottom: 5px;
   border-radius: 12px;
-  color: white;
-  width: 30%;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+
+  .logo-portafolio {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+  }
 }
 
-.sobre-mi-card h2 {
+.section-main {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  max-height: 80vh;
+  height: 79vh;
+  gap: 6px;
   margin-bottom: 10px;
+
+  /* Aboutme */
+  .aboutme-section {
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1a2e;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    width: 25%;
+    height: auto;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+    gap: 10px;
+  
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .info-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+    }
+
+    .info-list li {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+  }
+
+  .projects_education-section {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    border-radius: 8px;
+    flex-wrap:  wrap;
+    height: auto;
+    background-color: #1a1a2e;
+    padding: 10px;
+    gap: 20px;
+
+    .navegation-container{
+      padding: 15px;
+      display: flex;
+      gap: 20px;
+      height: 9vh;
+      width: 100vw;
+
+      button {
+        padding: 10px;
+        background-color: #1a1b32;
+        border-radius: 12px;
+        overflow: hidden;
+        margin: 3px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        color: white;
+        cursor: pointer;
+      }
+    }
+
+    .proyectos-container,
+    .educacion-container {
+      display: flex;
+      align-items: start;
+      gap: 20px;
+      flex: 1 1 35%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+
+      .card-container {
+        padding: 10px;
+        background-color: #1d1d36;
+        border-radius: 12px;
+        overflow: hidden;
+        margin: 3px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        .card-image {
+          width: 100%;
+          height: 180px;
+          object-fit: cover;
+        }
+
+        .card-content {
+          display: flex;
+          flex-direction: column;
+          padding: 15px;
+          color: white;
+          text-align: center;
+          gap: 10px;
+
+          h4 {
+            margin: 0;
+            font-size: 14px;
+            color: #aaa;
+          }
+
+          h2 {
+            margin: 5px 0 10px;
+            font-size: 22px;
+          }
+
+          .card-button{
+            margin-top: 10px;
+            background-color: #77dd77;
+            color: #000;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 40px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+          }
+
+        }
+
+
+
+      }
+
+      .card-container:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+
+    }
+
+  }  
+
 }
 
-.sobre-mi-card p {
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.info-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 10px;
-}
-
-.info-list li {
-  margin: 8px 0;
-  font-size: 14px;
-}
-
-.proyectos_educacion-container {
-  gap: 20px; /* Espacio entre los elementos */
-  padding: 15px;
-  width: 65%;
-}
-
-.navegacion-container{
-  padding: 15px;
-  display: flex;
-  gap: 20px;
-  width: 100vh;
-}
-
-.proyectos-container,
-.educacion-container {
-  display: flex;
-  gap: 20px;
-  flex: 1 1 35%; /* Hace que cada hijo ocupe un 35% del ancho */
-  flex-direction: row; /* Asegura que los hijos se alineen horizontalmente */
-  flex-wrap: wrap; /* Permite que los elementos se ajusten si no caben en la misma línea */
-  box-sizing: border-box; /* Evita que padding y bordes rompan el diseño */
-}
-
-
-
-/*  =========  Card  ======== */
-.card-container {
-  padding: 10px;
-  background-color: #1a1b32;
-  border-radius: 12px;
-  overflow: hidden;
-  margin: 3px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-container:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.card-image {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 15px;
-  color: white;
-  text-align: center;
-}
-
-.card-content h4 {
-  margin: 0;
-  font-size: 14px;
-  color: #aaa;
-}
-
-.card-content h2 {
-  margin: 5px 0 10px;
-  font-size: 22px;
-}
-
-.card-button{
-  margin-top: 10px;
-  background-color: #77dd77;
-  color: #000;
-  border: none;
-  border-radius: 4px;
-  padding: 8px 40px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  text-decoration: none;
-}
 
 /*  ======== Footer ======= */
 
 .footer {
-  background-color: #151525;
-  min-height: 10vh;
-  padding: 20px;
+  background-color: #1d1d34;
+  width: 100%;
+  height: auto;
+  padding: 10px;
   text-align: center;
   color: white;
   margin-top: auto;
@@ -176,4 +226,175 @@
 
 .footer-links a:hover {
   color: #77dd77; /* Verde claro */
+}
+
+
+@media screen and (max-width: 480px) {
+
+  .topbar {
+    box-shadow: 2px 10px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    margin: 0px 10px;
+    width: 95vw;
+    background-color: red;
+    border-radius: 3px;
+
+    .logo-portafolio {
+      display: flex;
+      align-items: center;
+      color: white;
+      font-size: 15px;
+    }
+  }
+
+  .section-main {
+      flex-direction: column;
+      width: 100vw;
+      max-height: 80vh;
+      height: 79vh;
+      gap: 6px;
+      margin-bottom: 10px;
+      padding: 0px 10px;
+  
+      /* Aboutme */
+      .aboutme-section {
+        display: flex;
+        align-items: center;
+        text-align: justify;
+        background-color: #1a1a2e;
+        padding: 10px 20px;
+        border-radius: 8px;
+        color: white;
+        width: 100%;
+        height: auto;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+        gap: 10px;
+  
+        h2 {
+          margin-bottom: 20px;
+        }
+  
+        p {
+          font-size: 14px;
+          line-height: 1.6;
+        }
+  
+        .info-list {
+          list-style: none;
+          padding: 0;
+          margin-top: 10px;
+        }
+  
+        .info-list li {
+          margin: 5px 0;
+          font-size: 14px;
+        }
+  
+      }
+  
+      .projects_education-section {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        border-radius: 8px;
+        flex-wrap: wrap;
+        height: auto;
+        background-color: #1a1a2e;
+        padding: 10px;
+        gap: 20px;
+  
+        .navegation-container {
+          padding: 15px;
+          display: flex;
+          gap: 20px;
+          height: 9vh;
+          width: 100vw;
+  
+          button {
+            padding: 10px;
+            background-color: #1a1b32;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 3px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: white;
+            cursor: pointer;
+          }
+        }
+  
+        .proyectos-container,
+        .educacion-container {
+          display: flex;
+          align-items: start;
+          gap: 20px;
+          flex: 1 1 35%;
+          flex-direction: row;
+          flex-wrap: wrap;
+          box-sizing: border-box;
+  
+          .card-container {
+            padding: 10px;
+            background-color: #1d1d36;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 3px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+            .card-image {
+              width: 100%;
+              height: 180px;
+              object-fit: cover;
+            }
+  
+            .card-content {
+              display: flex;
+              flex-direction: column;
+              padding: 15px;
+              color: white;
+              text-align: center;
+              gap: 10px;
+  
+              h4 {
+                margin: 0;
+                font-size: 14px;
+                color: #aaa;
+              }
+  
+              h2 {
+                margin: 5px 0 10px;
+                font-size: 22px;
+              }
+  
+              .card-button {
+                margin-top: 10px;
+                background-color: #77dd77;
+                color: #000;
+                border: none;
+                border-radius: 4px;
+                padding: 8px 40px;
+                font-size: 14px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                text-decoration: none;
+              }
+  
+            }
+  
+  
+  
+          }
+  
+          .card-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          }
+  
+  
+        }
+  
+      }
+  
+    }
 }
