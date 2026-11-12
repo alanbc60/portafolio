@@ -1,0 +1,85 @@
+/* Tokens del sistema Broadsheet + tema oscuro + tinta de acento.
+   Breakpoints usados en todo el proyecto (max-width):
+     ≥1440px  pantallas grandes
+     ≤1100px  laptops chicas
+     ≤900px   tablets (columnas → una)
+     ≤640px   móviles grandes
+     ≤420px   móviles chicos
+   (Las media queries no admiten var(), por eso se repiten los valores.) */
+
+:root {
+  --color-bg: #f3f2f2;
+  --color-surface: #eae9e9;
+  --color-text: #201e1d;
+  --color-accent: #0088b0;
+  --color-accent-2: #d6006c;
+  --color-process-yellow: #edbb00;
+
+  --color-neutral-300: #d7d3d3;
+  --color-neutral-500: #9b9797;
+  --color-neutral-600: #7d7979;
+  --color-neutral-700: #605d5d;
+  --color-neutral-800: #444141;
+
+  --color-accent-100: #e9f8ff;
+  --color-accent-800: #004961;
+  --color-accent-700: #006786;
+
+  --font-heading: "Source Serif 4", system-ui, sans-serif;
+  --font-body: "Source Serif 4", system-ui, sans-serif;
+
+  --space-1: 5px;
+  --space-2: 10px;
+  --space-3: 15px;
+  --space-4: 20px;
+  --space-5: 25px;
+  --space-6: 30px;
+  --space-8: 40px;
+
+  --radius-md: 2px;
+
+  --page-pad-x: clamp(24px, 6vw, 96px);
+  --page-pad-y: clamp(28px, 5vw, 72px);
+  --page-max: 1280px;
+  --section-gap: clamp(56px, 9vw, 112px);
+}
+
+[data-accent="magenta"] {
+  --color-accent: #d6006c;
+  --color-accent-100: #fff1f4;
+  --color-accent-700: #aa0b56;
+  --color-accent-800: #790e3d;
+  --color-accent-2: #0088b0;
+}
+
+[data-theme="dark"] {
+  --color-bg: #161514;
+  --color-surface: #211f1e;
+  --color-text: #f3f2f2;
+  --color-neutral-300: #3a3836;
+  --color-neutral-500: #5c5956;
+  --color-neutral-600: #8c8985;
+  --color-neutral-700: #a8a5a1;
+  --color-neutral-800: #c7c4c0;
+  --color-accent-100: #0a303e;
+  --color-accent-700: #62c5ee;
+  --color-accent-800: #99e0ff;
+}
+[data-theme="dark"][data-accent="magenta"] {
+  --color-accent-100: #4b1528;
+  --color-accent-700: #ff90b1;
+  --color-accent-800: #ffc0d0;
+}
+
+@media (min-width: 1440px) {
+  :root { --page-max: 1400px; }
+}
+@media (max-width: 900px) {
+  :root { --section-gap: 64px; }
+}
+@media (max-width: 640px) {
+  :root { --page-pad-x: 20px; --section-gap: 48px; }
+}
+@media (max-width: 420px) {
+  :root { --page-pad-x: 16px; }
+}
