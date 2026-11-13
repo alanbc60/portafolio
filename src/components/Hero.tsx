@@ -3,6 +3,7 @@ import { CmykText } from "@components/CmyText";
 import { Tag } from "@components/Tag.tsx";
 
 import "@styles/hero.css";
+import { ImageFrame } from "./ImageFrame";
 
 interface HeroProps {
   profile: Profile;
@@ -24,6 +25,9 @@ function Hero({ profile }: HeroProps) {
           ))}
         </ul>
         </div>
+        <div className="hero__media">
+        <ImageFrame image={profile.heroImage} />
+      </div>
       </section>
   )
 }
