@@ -10,20 +10,39 @@ export const navLinks: NavLink[] = [
 
 export const profile: Profile = {
   name: "Alan Bastida",
-  role: "Desarrollador web front-end",
+  role: "Desarrollador Web Full Stack",
   location: "Iztacalco, CDMX",
   summary:
-    "Soy un desarrollador web front-end que le gusta crear interfaces de usuario desafiantes. Me especializo en transformar ideas y diseños en experiencias digitales intuitivas y atractivas.",
+    "Soy un desarrollador web full-stack que le gusta crear interfaces de usuario desafiantes. Me especializo en transformar ideas y diseños en experiencias digitales intuitivas y atractivas.",
   tools: ["HTML", "CSS", "Tailwind", "JavaScript", "React", "Java"],
   contact: [
     { label: "GitHub", href: "#" },
     { label: "LinkedIn", href: "#" },
     { label: "Email", href: "#" },
   ],
-  heroImage: { alt: "Foto destacada", placeholder: "Foto o captura destacada" },
+  heroImage: { 
+    alt: "Foto destacada", 
+    placeholder: "Foto o captura destacada",
+    src: `${import.meta.env.BASE_URL}destacada.webp`,
+  },
 };
 
 export const featuredProjects: Project[] = [
+
+  {
+    id: "asteci-portal",
+    title: "Portal ASTECI",
+    tag: "Trabajo",
+    description:
+      "Portal web para la empresa ASTECI, con información de la compañía, servicios, clientes y contacto.",
+    stack: ["HTML", "CSS", "JavaScript", "React", "Astro"],
+    href: "#",
+    image: { 
+      alt: "Captura de Portal ASTECI", 
+      placeholder: "Captura de Portal ASTECI" 
+    },
+  },
+
   {
     id: "zapateria",
     title: "Zapatería PG",
@@ -32,7 +51,11 @@ export const featuredProjects: Project[] = [
       "Catálogo y ficha de producto para una zapatería, con navegación por categorías y carrito de compra.",
     stack: ["HTML", "CSS", "JavaScript", "Java"],
     href: "#",
-    image: { alt: "Captura de Zapatería PG", placeholder: "Captura de Zapatería PG" },
+    image: { 
+      alt: "Captura de Zapatería PG", 
+      placeholder: "Captura de Zapatería PG",
+      src: `${import.meta.env.BASE_URL}banner_zapateria.png`
+    },
   },
   {
     id: "dmas",
@@ -42,7 +65,11 @@ export const featuredProjects: Project[] = [
       "Portal departamental con acceso a seminarios, proyectos de investigación, publicaciones, eventos y lineamientos.",
     stack: ["HTML", "Tailwind", "JavaScript", "React"],
     href: "#",
-    image: { alt: "Captura de Página DMAS", placeholder: "Captura de Página DMAS" },
+    image: { 
+      alt: "Captura de Página DMAS", 
+      placeholder: "Captura de Página DMAS",
+      src: `${import.meta.env.BASE_URL}banner_dmas.png`
+    },
   },
 ];
 
