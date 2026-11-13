@@ -1,0 +1,40 @@
+.cmyk-head, .cmyk-num { position: relative; display: block; }
+.cmyk-num { width: fit-content; line-height: 0.9; font-feature-settings: "pnum" 1; }
+
+.cmyk-head .paper,
+.cmyk-num .paper { color: var(--color-bg); }
+.cmyk-head .paper {
+  text-shadow: 0.027em 0.0185em 0 var(--color-bg), -0.0245em -0.0175em 0 var(--color-bg);
+}
+.cmyk-num .paper {
+  text-shadow: 0.036em 0.025em 0 var(--color-bg), -0.031em -0.023em 0 var(--color-bg);
+}
+
+.cmyk-head .plate,
+.cmyk-num .plate {
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  user-select: none;
+}
+.plate-c { color: var(--color-accent); }
+.plate-m { color: var(--color-accent-2); }
+.plate-y { color: var(--color-process-yellow); }
+
+.cmyk-head .plate-m { translate: 0.018em 0.0125em; }
+.cmyk-head .plate-y { translate: -0.0155em -0.0115em; }
+.cmyk-num  .plate-m { translate: 0.036em 0.025em; }
+.cmyk-num  .plate-y { translate: -0.031em -0.023em; }
+
+/* En oscuro, multiply sobre fondo negro borraría las placas: se pasa a screen */
+[data-theme="dark"] .cmyk-head .plate,
+[data-theme="dark"] .cmyk-num .plate { mix-blend-mode: screen; }
+[data-theme="dark"] .cmyk-head .paper,
+[data-theme="dark"] .cmyk-num .paper { color: var(--color-text); text-shadow: none; }
+
+/* En móviles el desfase se reduce para que los trazos finos no se pierdan */
+@media (max-width: 640px) {
+  .cmyk-head .plate-m { translate: 0.012em 0.008em; }
+  .cmyk-head .plate-y { translate: -0.01em -0.008em; }
+}
