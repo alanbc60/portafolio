@@ -3,6 +3,7 @@ import { featuredProjects, navLinks, profile } from "./data/portfolio";
 import { useTheme } from "@hooks/useTheme";
 import Hero from "@components/Hero";
 import SectionHeader from "@components/SectionHeader";
+import ProjectFeature from "@components/ProjectFeature";
 
 function App() {
   const { theme, toggle } = useTheme();
@@ -19,9 +20,9 @@ function App() {
               title="Proyectos" 
               count={featuredProjects.length} 
             />
-            {/* {featuredProjects.map((p, i) => (
+            {featuredProjects.map((p, i) => (
               <ProjectFeature key={p.id} project={p} index={i} reverse={i % 2 === 1} />
-            ))} */}
+            ))} 
           </section>
           {/* <ProjectIndex projects={indexProjects} />
           <EducationSection education={education} certificates={certificates} />  */}
