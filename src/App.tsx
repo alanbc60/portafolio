@@ -1,9 +1,11 @@
 import Nav from "@components/Nav";
-import { featuredProjects, navLinks, profile } from "./data/portfolio";
+import { certificates, education, featuredProjects, indexProjects, navLinks, profile } from "./data/portfolio";
 import { useTheme } from "@hooks/useTheme";
 import Hero from "@components/Hero";
 import SectionHeader from "@components/SectionHeader";
 import ProjectFeature from "@components/ProjectFeature";
+import { ProjectIndex } from "@components/ProjectIndex";
+import { EducationSection } from "@components/EducationSection";
 
 function App() {
   const { theme, toggle } = useTheme();
@@ -24,8 +26,8 @@ function App() {
               <ProjectFeature key={p.id} project={p} index={i} reverse={i % 2 === 1} />
             ))} 
           </section>
-          {/* <ProjectIndex projects={indexProjects} />
-          <EducationSection education={education} certificates={certificates} />  */}
+          <ProjectIndex projects={indexProjects} />
+          <EducationSection education={education} certificates={certificates} />
         </main>
       </div>
     </div>

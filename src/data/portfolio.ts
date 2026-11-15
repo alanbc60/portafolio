@@ -36,10 +36,11 @@ export const featuredProjects: Project[] = [
     description:
       "Portal web para la empresa ASTECI, con información de la compañía, servicios, clientes y contacto.",
     stack: ["HTML", "CSS", "JavaScript", "React", "Astro"],
-    href: "#",
+    href: "https://ist-ssr-asteci-portal-51749073081.us-central1.run.app/home",
     image: { 
       alt: "Captura de Portal ASTECI", 
-      placeholder: "Captura de Portal ASTECI" 
+      placeholder: "Captura de Portal ASTECI",
+      src: `${import.meta.env.BASE_URL}banner_asteci.png`
     },
   },
 
@@ -50,7 +51,7 @@ export const featuredProjects: Project[] = [
     description:
       "Catálogo y ficha de producto para una zapatería, con navegación por categorías y carrito de compra.",
     stack: ["HTML", "CSS", "JavaScript", "Java"],
-    href: "#",
+    href: "https://zapaterias-s-g.netlify.app/",
     image: { 
       alt: "Captura de Zapatería PG", 
       placeholder: "Captura de Zapatería PG",
@@ -64,7 +65,7 @@ export const featuredProjects: Project[] = [
     description:
       "Portal departamental con acceso a seminarios, proyectos de investigación, publicaciones, eventos y lineamientos.",
     stack: ["HTML", "Tailwind", "JavaScript", "React"],
-    href: "#",
+    href: "http://dmas.cua.uam.mx/",
     image: { 
       alt: "Captura de Página DMAS", 
       placeholder: "Captura de Página DMAS",
@@ -74,10 +75,7 @@ export const featuredProjects: Project[] = [
 ];
 
 const names = [
-  "Tienda en línea", "App de clima", "Blog personal", "Landing SaaS",
-  "Dashboard interno", "Sitio de restaurante", "Portafolio de fotografía",
-  "Reserva de citas", "Juego de trivia", "Editor de notas", "Galería de arte",
-  "Calculadora financiera", "Rediseño institucional",
+  "Acadia",
 ];
 const tags = ["Freelance", "Escolar", "Personal", "Servicio social"];
 const stacks = ["HTML · CSS · JS", "React · Tailwind", "JavaScript · Java", "HTML · CSS · React"];
