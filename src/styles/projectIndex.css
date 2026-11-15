@@ -1,0 +1,8 @@
+.project-index { 
+  margin-top: var(--section-gap); 
+}
+
+.project-index__list { 
+  list-style: none; 
+  margin: 0; padding: 0; 
+}
