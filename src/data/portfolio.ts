@@ -9,6 +9,7 @@ export const navLinks: NavLink[] = [
 ];
 
 export const profile: Profile = {
+  username: "alanbc - portafolio",
   name: "Alan Bastida",
   role: "Desarrollador Web Full Stack",
   location: "Iztacalco, CDMX",
