@@ -23,7 +23,7 @@ export const profile: Profile = {
   heroImage: { 
     alt: "Foto destacada", 
     placeholder: "Foto o captura destacada",
-    src: `${import.meta.env.BASE_URL}destacada.webp`,
+    src: `${import.meta.env.BASE_URL}destacada.png`,
   },
 };
 
