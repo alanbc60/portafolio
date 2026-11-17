@@ -27,7 +27,7 @@ export function EducationSection({ education, certificates }: EducationSectionPr
         <ul className="edu__list">
           {certificates.map((c) => (
             <li key={c.id} className="edu__item">
-              <span className="edu__meta">{c.year}</span>
+              <span className="edu__meta">{c.period}</span>
               <h3>{c.title}</h3>
               <p>{c.issuer}</p>
             </li>

@@ -74,39 +74,47 @@ export const featuredProjects: Project[] = [
   },
 ];
 
-const names = [
-  "Acadia",
+const OthersProjects = [
+  {
+    id: "bytecamp",
+    title: "ByteCamp",
+    href: "https://bytecamp.netlify.app/",
+    tag: "Freelance",
+    stacks: ["HTML", "CSS", "TS", "React", "Express", "PostgreSQL"],
+    image: {
+      alt: "Captura de ByteCamp",
+      placeholder: "Captura de ByteCamp",
+      src: `${import.meta.env.BASE_URL}banner_bytecamp.png`,
+    }
+  }
 ];
-const tags = ["Freelance", "Escolar", "Personal", "Servicio social"];
-const stacks = ["HTML · CSS · JS", "React · Tailwind", "JavaScript · Java", "HTML · CSS · React"];
 
-export const indexProjects: IndexProject[] = names.map((title, i) => ({
+export const indexProjects: IndexProject[] = OthersProjects.map((project, i) => ({
   id: `idx-${i}`,
   num: String(i + featuredProjects.length + 1).padStart(2, "0"),
-  title,
-  tag: tags[i % tags.length],
-  stack: stacks[i % stacks.length],
-  href: "#",
+  title: project.title,
+  tag: project.tag,
+  stack: project.stacks[i % project.stacks.length],
+  href: project.href,
+  image: project.image,
 }));
 
 export const education: EducationItem[] = [
   {
     id: "ing",
-    period: "2019—2024",
+    period: "2017—2024",
     title: "Ingeniería en Computación",
     description: "Añade la institución y una línea sobre tu enfoque.",
   },
-  {
-    id: "otro",
-    period: "Año—Año",
-    title: "Otro estudio o bootcamp",
-    description: "Reemplaza o elimina este bloque.",
-  },
 ];
 
-export const certificates: Certificate[] = [1, 2, 3].map((n) => ({
-  id: `cert-${n}`,
-  year: "Año",
-  title: "Nombre del certificado",
-  issuer: "Emisor",
-}));
+export const certificates: Certificate[] = [
+  {
+    id: `cert-generation`,
+    period: "Enero 2024 — Mayo 2024",
+    title: "Bootcamp FullStack Java Developer",
+    description: "Bootcamp de programación full-stack Java y Frontend.",
+    issuer: "Generation",
+
+  }
+];

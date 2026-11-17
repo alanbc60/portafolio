@@ -55,7 +55,8 @@ export interface EducationItem {
 
 export interface Certificate {
   id: string;
-  year: string;
+  period: string;
   title: string;
+  description: string;
   issuer: string;
 }
