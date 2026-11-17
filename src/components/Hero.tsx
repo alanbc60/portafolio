@@ -26,7 +26,7 @@ function Hero({ profile }: HeroProps) {
         </ul>
         </div>
         <div className="hero__media">
-        <ImageFrame image={profile.heroImage} />
+        <ImageFrame image={profile.heroImage} flat />
       </div>
       </section>
   )

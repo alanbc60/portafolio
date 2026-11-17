@@ -5,13 +5,14 @@ interface ImageFrameProps {
   image: ImageSource;
   /** Proporción CSS, p. ej. "4 / 3". Si se omite, llena el alto del contenedor. */
   aspectRatio?: string;
+  flat?: boolean;
   className?: string;
 }
 
-export function ImageFrame({ image, aspectRatio, className = "" }: ImageFrameProps) {
+export function ImageFrame({ image, aspectRatio, flat = false, className = "" }: ImageFrameProps) {
   return (
     <figure
-      className={`image-frame halftone ${className}`.trim()}
+      className={`image-frame ${flat ? "image-frame--flat" : "halftone"} ${className}`.trim()}
       style={aspectRatio ? { aspectRatio } : undefined}
     >
       {image.src ? (
