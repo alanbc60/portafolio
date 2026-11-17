@@ -39,7 +39,7 @@
   --radius-md: 2px;
 
   --page-pad-x: clamp(24px, 6vw, 96px);
-  --page-pad-y: clamp(28px, 5vw, 72px);
+  --page-pad-y: clamp(20px, 3vw, 20px);
   --page-max: 1280px;
   --section-gap: clamp(56px, 9vw, 112px);
 }

@@ -18,6 +18,7 @@ export interface ImageSource {
 }
 
 export interface Profile {
+  username: string;
   name: string;
   role: string;
   location: string;

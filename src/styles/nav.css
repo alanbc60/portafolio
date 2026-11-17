@@ -5,10 +5,10 @@
   display: flex;
   align-items: center;
   gap: var(--space-6);
-  padding: var(--space-3) var(--page-pad-x);
-  margin: 0 calc(var(--page-pad-x) * -1) var(--space-8);
+  padding: var(--space-3) var(--space-1);
   background: color-mix(in srgb, var(--color-bg) 92%, transparent);
   backdrop-filter: blur(6px);
+  border-bottom: 3px solid black;
 }
 .nav__brand {
   margin-right: auto;

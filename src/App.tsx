@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="page">
       <div className="page__inner">
-        <Nav brand={profile.name} links={navLinks} theme={theme} onToggleTheme={toggle} />
+        <Nav brand={profile.username} links={navLinks} theme={theme} onToggleTheme={toggle} />
         <main>
           <Hero profile={profile} />
           <section id="proyectos" aria-labelledby="proyectos-title">
