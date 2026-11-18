@@ -1,6 +1,12 @@
 import type {
-  Certificate, EducationItem, IndexProject, NavLink, Profile, Project,
+  Certificate, ContactLink, EducationItem, IndexProject, NavLink, Profile, Project,
 } from "@app-types/typesPortfolio";
+
+export const contactLinks: ContactLink[] = [
+  { label: "GitHub", href: "https://github.com/alanbc60" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/alan-keveen-bastida-cervantes/" },
+  { label: "Email", href: "mailto:alankeveen.bastida@gmail.com" },
+];
 
 export const navLinks: NavLink[] = [
   { label: "Proyectos", href: "#proyectos" },

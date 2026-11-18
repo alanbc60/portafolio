@@ -12,7 +12,7 @@ export function Nav({ brand, links, theme, onToggleTheme }: NavProps) {
   const next = theme === "dark" ? "claro" : "oscuro";
   return (
     <header className="nav">
-      <a className="nav__brand" href="#inicio">{brand}</a>
+      <p className="nav__brand">{brand}</p>
       <nav className="nav__links" aria-label="Principal">
         {links.map((l) => (
           <a key={l.href} href={l.href}>{l.label}</a>
