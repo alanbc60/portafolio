@@ -1,8 +1,10 @@
 .hero {
   display: flex;
+  height: 100vh;
   gap: clamp(32px, 6vw, 96px);
-  align-items: stretch;
-  margin-bottom: var(--section-gap);
+  align-items: center;
+  padding-bottom: 7rem;
+  /* margin-bottom: var(--section-gap); */
 }
 .hero__text { 
   display: flex; 

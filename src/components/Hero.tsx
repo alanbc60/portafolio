@@ -4,6 +4,7 @@ import { Tag } from "@components/Tag.tsx";
 
 import "@styles/hero.css";
 import { ImageFrame } from "./ImageFrame";
+import ContanctLinks from "./ContanctLinks";
 
 interface HeroProps {
   profile: Profile;
@@ -26,7 +27,10 @@ function Hero({ profile }: HeroProps) {
         </ul>
         </div>
         <div className="hero__media">
-        <ImageFrame image={profile.heroImage} flat />
+        <div>
+          <ImageFrame image={profile.heroImage} flat />
+          <ContanctLinks />
+        </div>
       </div>
       </section>
   )
